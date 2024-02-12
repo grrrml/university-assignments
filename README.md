@@ -8,4 +8,4 @@ Each assignment within the repository is accompanied by relevant documentation, 
 
 As I continue to progress through my academic journey, this repository will serve as a living archive, showcasing my development and evolution as a student and a programmer. The repository also provides an opportunity for collaboration and feedback, as peers and professors can easily access and provide constructive criticism or suggestions on the assignments.
 
-Feel free to explore the University Assignments Repository and delve into the diverse range of projects, encompassing areas such as programming, data analysis, research papers, and more. I hope this collection reflects my dedication, passion, and commitment to learning while showcasing the skills I have acquired during my academic pursuits.
+Feel free to explore the University Assignments Repository and delve into the diverse range of projects, encompassing areas such as programming, data analysis, and more. I hope this collection reflects my dedication, passion, and commitment to learning while showcasing the skills I have acquired during my academic pursuits.
