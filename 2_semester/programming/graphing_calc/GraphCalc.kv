@@ -1,0 +1,116 @@
+#:kivy 2.1.0
+
+<CustomButton@Button>:
+    font_size: 32
+
+<CustomLabel@Label>:
+    font_size: 32
+
+<GraphCalcGridLayout@GridLayout>:
+    id: graphcalc
+    display: entry
+    rows: 7
+    columns: 1
+    padding: 10
+    spacing: 10
+
+    BoxLayout:
+        size_hint: (4, 4)
+        height: self.width
+        Graph:
+            id: graph
+            xlabel: 'x'
+            ylabel: 'y'
+            x_ticks_major: 25
+            y_ticks_major: 25
+            y_grid_label: True
+            x_grid_label: True
+            padding: 5
+            x_grid: True
+            y_grid: True
+            xmin: -50
+            xmax: 50
+            ymin: 0
+            ymax: 50
+            legend: False
+
+    BoxLayout:
+        CustomLabel:
+            text: 'f(x) = '
+            width: 0.25
+        TextInput:
+            id: entry
+            font_size: 32
+            multiline: False
+    BoxLayout:
+        CustomLabel:
+            text: 'xmin:'
+        CustomLabel:
+            text: 'xmax:'
+        CustomLabel:
+            text: 'ymin:'
+        CustomLabel:
+            text: 'ymax:'
+
+    BoxLayout:
+        TextInput:
+            id: xmin
+            font_size: 32
+            multiline: False
+            text: '-50'
+        TextInput:
+            id: xmax
+            font_size: 32
+            multiline: False
+            text: '50'
+        TextInput:
+            id: ymin
+            font_size: 32
+            multiline: False
+            text: '-50'
+        TextInput:
+            id: ymax
+            font_size: 32
+            multiline: False
+            text: '50'
+    
+    BoxLayout:
+        spacing: 10
+        CustomButton:
+            text: '\u03C0'
+            on_press: entry.text += self.text
+        CustomButton:
+            text: 'sin'
+            on_press: entry.text += self.text
+        CustomButton:
+            text: 'cos'
+            on_press: entry.text += self.text
+
+    BoxLayout:
+        spacing: 10
+        CustomButton:
+            text: 'tg'
+            on_press: entry.text += self.text
+        CustomButton:
+            text: 'ctg'
+            on_press: entry.text += self.text
+        CustomButton:
+            text: 'ln'
+            on_press: entry.text += self.text
+
+    BoxLayout:
+        spacing: 10
+        CustomButton:
+            text: 'graph'
+            on_press:
+                graph.xmin = xmin.text
+                graph.xmax = xmax.text
+                graph.ymin = ymin.text
+                graph.ymax = ymax.text
+                graphcalc.update_graph2(graphcalc.read_function(entry.text), xmin.text, xmax.text)
+        CustomButton:
+            text: 'clear'
+            on_press: graphcalc.clear_graph()
+
+
+
