@@ -1,0 +1,2 @@
+# List no. 7 - binary trees
+Exercises 1 to 5 focused on building a binary tree with diverse functionalities. In Exercise 6, the objective was to solve the missionary and cannibals problem utilizing BFS. Lastly, Exercise 7 tackled the well-known problem centered around two water jugs.
