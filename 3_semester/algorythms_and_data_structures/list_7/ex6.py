@@ -6,7 +6,7 @@ def safety_check(missionaries: int, cannibals: int):
 
     Args:
         missionaries (int): the number of missionaries on the left bank of the river
-        cannibals (int): the number of missionaries on the left bank of the river
+        cannibals (int): the number of cannibals on the left bank of the river
 
     Returns:
         bool: True if missionaries are safe, False otherwise
